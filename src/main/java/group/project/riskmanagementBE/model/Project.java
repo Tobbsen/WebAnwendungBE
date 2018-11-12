@@ -44,4 +44,11 @@ public class Project extends ResourceSupport{
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Project[uid=%s, projectName='%s', description='%s']",
+                uid, projectName, description);
+    }
 }
