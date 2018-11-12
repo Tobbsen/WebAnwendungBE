@@ -9,6 +9,8 @@ public class Project extends ResourceSupport{
     private String projectName;
     private String description;
 
+    public Project() { }
+
     public Project(String name) {
         this.projectName = name;
     }
