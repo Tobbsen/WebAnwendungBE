@@ -37,7 +37,7 @@ public class ProjectController {
             Project project = projectRepository.findById(id)
                     .orElseThrow(() -> new ProjectNotFoundException(id));
             Link link = ControllerLinkBuilder.linkTo(ProjectController.class)
-                    .slash(project.getId())
+                    .slash(project.getUid())
                     .withSelfRel();
             project.add(link);
             //project.add(linkToFE);
