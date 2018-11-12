@@ -36,11 +36,6 @@ public class ProjectController {
         try{
             Project project = projectRepository.findById(id)
                     .orElseThrow(() -> new ProjectNotFoundException(id));
-            Link link = ControllerLinkBuilder.linkTo(ProjectController.class)
-                    .slash(project.getUid())
-                    .withSelfRel();
-            project.add(link);
-            //project.add(linkToFE);
             return project;}
         catch(ProjectNotFoundException e){
             System.out.println(e);

@@ -3,7 +3,7 @@ package group.project.riskmanagementBE.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.hateoas.ResourceSupport;
 
-public class Project extends ResourceSupport{
+public class Project{
     @Id
     private String uid;
     private String projectName;
