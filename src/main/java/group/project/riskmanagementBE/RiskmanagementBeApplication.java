@@ -32,8 +32,9 @@ public class RiskmanagementBeApplication {
 	}
 	public static void main(String[] args) {
 
-		SpringApplication.run(RiskmanagementBeApplication.class, args);
 		String mongoLogin = System.getenv("MONGO_LOGIN");
 		System.setProperty("spring.data.mongodb.uri",mongoLogin);
+		SpringApplication.run(RiskmanagementBeApplication.class, args);
+
 	}
 }
