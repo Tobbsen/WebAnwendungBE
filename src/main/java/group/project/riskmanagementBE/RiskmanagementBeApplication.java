@@ -31,6 +31,9 @@ public class RiskmanagementBeApplication {
 		return "go to <a href=\"/projects\"> Projects </a> to see all initialized projects" + "</br>";
 	}
 	public static void main(String[] args) {
+
 		SpringApplication.run(RiskmanagementBeApplication.class, args);
+		String mongoLogin = System.getenv("MONGO_LOGIN");
+		System.setProperty("spring.data.mongodb.uri",mongoLogin);
 	}
 }
